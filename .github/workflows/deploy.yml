@@ -18,8 +18,8 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "./*" ssh -i "new-ec2-key.pem"
-          target: "/var/www/your-app" Host Website
+          source: "./*" 
+          target: "/var/www/your-app"
 
       - name: Reload Nginx (optional)
         uses: appleboy/ssh-action@master
